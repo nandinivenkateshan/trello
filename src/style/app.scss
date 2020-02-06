@@ -1,0 +1,19 @@
+.main__header__heading {
+    text-align: center;
+}
+.main__addList {
+height: 30px;
+width: 250px;
+background: green;
+color: #ffffff;
+margin: auto;
+font-weight: bold;
+line-height: 30px;
+text-align: center;
+text-shadow: 2px 2px black;
+opacity: 0.6;
+&:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+}
