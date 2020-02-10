@@ -1,19 +1,49 @@
+$board-color: rgb(180, 141, 148);
+
 .main__header__heading {
     text-align: center;
 }
-.main__addList {
-height: 30px;
-width: 250px;
-background: green;
-color: #ffffff;
-margin: auto;
-font-weight: bold;
-line-height: 30px;
-text-align: center;
-text-shadow: 2px 2px black;
-opacity: 0.6;
-&:hover {
-    opacity: 0.4;
+
+.main__new-board {
+    height: 40px;
+    width: 250px;
+    background: $board-color;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 4px 4px rgb(189, 171, 171);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    margin: auto;
+    transition: transform 1s linear ;
     cursor: pointer;
+    &:hover{
+       transform: scale(1.1)
+    }
 }
+
+.main__create-new-board {
+    @extend .main__new-board;
+    min-height: 180px;
+
+
+}
+
+.create-board-input-box {
+    max-width: 150px;
+    padding: 10px;
+    color: red;
+    font-size: 15px;
+}
+
+.cancel-btn {
+padding: 5px;
+background: rgba(247, 0, 0, 0.281);
+color: rgba(255, 255, 255, 0.918);
+font-weight: bold;
+}
+ .create-btn {
+    @extend .cancel-btn;
+    background: rgba(172, 207, 89, 0.281);
 }
