@@ -6,3 +6,17 @@ export function createBoard () {
     payload: true
   }
 }
+
+export function boardName (val) {
+  return {
+    type: actionType.BOARD_NAME,
+    payload: val
+  }
+}
+
+export function boardLists (val) {
+  return {
+    type: actionType.BOARD_LISTS,
+    payload: val
+  }
+}

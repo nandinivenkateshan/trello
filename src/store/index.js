@@ -1,4 +1,6 @@
 const state = {
-  isCreateBoard: false
+  isCreateBoard: false,
+  boardName: '',
+  boardLists: []
 }
 export default state
