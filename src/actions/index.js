@@ -1,9 +1,9 @@
 import * as actionType from './actionTypes'
 
-export function createBoard () {
+export function createBoard (val) {
   return {
     type: actionType.CREATE_BOARD,
-    payload: true
+    payload: val
   }
 }
 

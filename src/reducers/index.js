@@ -1,7 +1,10 @@
-import initialState from '../store'
+const initialState = {
+  isCreateBoard: false,
+  boardName: '',
+  boardLists: []
+}
 
 const createBoard = (state = initialState, action) => {
-  console.log('action', action)
   switch (action.type) {
     case 'CREATE_BOARD' :
       return { ...state, isCreateBoard: action.payload }
