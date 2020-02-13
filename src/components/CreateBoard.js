@@ -3,6 +3,8 @@ import '../style/app.scss'
 import uuid from 'uuid/v4'
 import { useSelector, useDispatch } from 'react-redux'
 import { createBoard, boardName, boardLists } from '../actions'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App () {
   const state = useSelector(state => state)
@@ -29,8 +31,9 @@ function App () {
       </header>
       {!state.isCreateBoard
         ? (
-          <div className='main__new-board' title='click to create a board'>
-            <p onClick={() => dispatch(createBoard(true))}>Create new board</p>
+          <div className='main__new-board' title='click to create a board' onClick={() => dispatch(createBoard(true))}>
+            <p>Create new board</p>
+            <p><FontAwesomeIcon icon={faPlusCircle} style={{ color: 'white' }} /> </p>
           </div>)
         : (
           <form className='main__create-new-board' onSubmit={e => handleCreate(e)}>
