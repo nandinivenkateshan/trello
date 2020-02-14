@@ -18,7 +18,8 @@ function App () {
     e.preventDefault()
     const obj = {
       id: uuid(),
-      boardName: state.boardName
+      boardName: state.boardName,
+      editBoardName: false
     }
     dispatch(boardLists(obj))
     dispatch(boardName(''))
